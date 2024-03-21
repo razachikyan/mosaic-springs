@@ -1,0 +1,157 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1040px;
+    background-image: url("../public/images/header.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 37px 10px 70px 10px;
+}
+
+.header > * {
+    z-index: 10;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(219, 103, 67, 0.2);
+}
+
+.header_smoke {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -150px;
+    background-image: url("../public/images/smoke.png");
+}
+
+.header_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 300px;
+    max-width: 1240px;
+    height: 100%;
+    width: 100%;
+}
+
+.menu_icon {
+    position: absolute;
+    top: 37px;
+    right: 37px;
+}
+
+.header_clouds {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 250px;
+    height: 600px;
+    background-image: url("../public/images/cloud.png"),
+                      url("../public/images/cloud.png"),
+                      url("../public/images/cloud.png"),
+                      url("../public/images/cloud.png");
+    background-repeat: no-repeat;
+    background-position: -100px top, calc(100% + 100px) top, -100px 80%, calc(100% + 100px) 80%;
+}
+
+.header_logo {
+    margin-bottom: 135px;
+}
+
+.title {
+    align-self: flex-start;
+    width: 560px;
+    text-align: end;
+}
+
+.title_main {
+    display: block;
+    text-align: start;
+    color: #D7795C;
+    font-family: "BigShouldersStencilText";
+    font-size: 200px;
+}
+
+.title_second {
+    color: #ffffff;
+    font-family: "Calligraffitti";
+    font-size: 100px;
+    line-height: 35px;
+}
+
+.section_title {
+    font-family: "Cormorant";
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about {
+    display: flex;
+    padding-top: 144px;
+    padding-bottom: 186px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111015;
+}
+
+.about_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1240px;
+    height: 100%;
+    width: 100%;
+}
+
+.about_title {
+    margin-bottom: 114px;
+}
+
+.about_box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about_image {
+    width: 493px;
+    height: 545px;
+    background-image: url("../public/images/about.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.about_text {
+    max-width: 647px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.about_descr {
+    font-family: "UbuntuCondensed";
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+}
