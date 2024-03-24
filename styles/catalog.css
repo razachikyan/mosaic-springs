@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .bg_image {
     position: fixed;
     z-index: 1;
@@ -54,11 +59,11 @@
 }
 
 .catalog_images {
+    align-self: flex-start;
     position: relative;
     z-index: 100;
-    width: 100%;
+    width: 1580px;
     height: 775px;
-    max-width: 1338px;
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
