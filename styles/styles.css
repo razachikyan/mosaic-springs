@@ -213,6 +213,7 @@
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 .navigator_item:nth-child(1) {
@@ -230,6 +231,7 @@
 .navigator_item > span {
     position: relative;
     z-index: 10;
+    cursor: pointer;
     font-family: "Cormorant";
     font-weight: 700;
     font-size: 40px;

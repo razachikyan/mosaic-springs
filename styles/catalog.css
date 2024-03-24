@@ -1,0 +1,118 @@
+.bg_image {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../public/images//catalog_bg.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.header > * {
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1338px;
+    width: 100%;
+    padding: 37px 10px 0 10px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+}
+
+.catalog {
+    position: relative;
+    z-index: 100;
+    margin-bottom: 67px;
+}
+
+.catalog_container {
+    max-width: 1338px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalog_title {
+    font-family: "Cormorant";
+    font-size: 40px;
+    color: #F8F7FF;
+    font-weight: 600;
+    margin-bottom: 70px;
+}
+
+.catalog_images {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 775px;
+    max-width: 1338px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.catalog_image {
+    width: 380px;
+    height: 620px;
+    background-size: 100% 570px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.catalog_image:nth-child(1) {
+    background-image: url("../public/images/landspace1.png");
+}
+
+.catalog_image:nth-child(2) {
+    background-image: url("../public/images/landspace2.png");
+}
+
+.catalog_image:nth-child(3) {
+    background-image: url("../public/images/landspace3.png");
+}
+
+.catalog_image:nth-child(4) {
+    background-image: url("../public/images/landspace4.png");
+}
+
+
+.catalog_image > p {
+    font-family: "Cormorant";
+    font-size: 27px;
+    color: #F8F7FF;
+    font-weight: 600;
+}
+
+.catalog_image:nth-child(2) {
+    margin-top: calc(205px / 3);
+}
+.catalog_image:nth-child(3) {
+    margin-top: calc(205px / 1.5);
+}
+
+.catalog_image:last-child {
+    position: absolute;
+    left: 1200px;
+    bottom: 0;
+    width: 380px;
+    height: 620px;
+    z-index: 1000;
+}
