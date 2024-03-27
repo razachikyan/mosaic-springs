@@ -1,0 +1,27 @@
+.main {
+    height: 100%;
+    background-image: url("../public/images/header.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 180px 0;
+}
+
+.container {
+    width: 918px;
+    height: 655px;
+    background-color: rgba(219, 103, 67, 0.47);
+    border-radius: 50px;
+    padding: 113px 220px 90px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}

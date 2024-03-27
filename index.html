@@ -14,9 +14,22 @@
         <span class="header_smoke"></span>
         <div class="header_container">
             <div class="header_clouds"></div>
-            <button>
+            <button id="menu">
                 <img src="./public/icons/menu.svg" class="menu_icon" />
             </button>
+            <div id="modal-close" class="modal_bck"></div>
+            <div id="modal" class="modal">
+                <ul class="modal_list">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#landspace">Landscape</a></li>
+                    <li><a href="#interior">Interior</a></li>
+                </ul>
+                <a href="signup.html" class="logout">
+                    Sign Up
+                </a>
+            </div>
             <img src="./public/icons/logo.svg" class="header_logo" />
             <p class="title">
                 <span class="title_main">Mosaic</span>
@@ -49,9 +62,9 @@
                     project
                 </h3>
                 <div class="project_navigators">
-                    <div id="landspace" class="navigator_item"><span>Landscape</span></div>
+                    <a href="catalog.html" id="landspace" class="navigator_item"><span>Landscape</span></a>
                     <div class="navigator_item"></div>
-                    <div id="interior" class="navigator_item"><span>Interior</span></div>
+                    <a href="catalog.html" id="interior" class="navigator_item"><span>Interior</span></a>
                 </div>
             </div>
         </section>
@@ -75,5 +88,8 @@
         </section>
     </main>
     <footer></footer>
+
+    <script src="./scripts/menu.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
 </body>
 </html>

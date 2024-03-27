@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landspace</title>
+    <title>Modaic Springs</title>
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="./styles/global.css" />
@@ -15,28 +15,34 @@
         <a href="./index.html" class="header_logo">
             <img class="logo_image" src="./public/icons/logo.svg"/>
         </a>
-        <img src="./public/icons/menu.svg" class="menu_icon" />
+        <button id="menu">
+            <img src="./public/icons/menu.svg" class="menu_icon" />
+        </button>
     </header>
     <main class="main">
+        <span class="line"></span>
+        <span class="line"></span>
         <section class="catalog">
             <div class="catalog_container">
-                <h1 class="catalog_title">
+                <h1 id="title" class="catalog_title">
                     Landspace
                 </h1>
-                <div class="catalog_images">
-                    <div class="catalog_image">
+                <div id="items" class="catalog_images">
+                    <div class="catalog_image landspace_image">
                         <p>Park around building</p>
                     </div>
-                    <div class="catalog_image">
+                    <div class="catalog_image landspace_image">
                         <p>Modern banches to spend time</p>
                     </div>
-                    <div class="catalog_image">
+                    <div class="catalog_image landspace_image">
                         <p>Cafe nead the place</p>
                     </div>
-                    <div class="catalog_image"></div>
+                    <div class="catalog_image landspace_image"></div>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="./scripts/catalog.js" defer></script>
 </body>
 </html>
