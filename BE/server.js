@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs/promises");
 const cors = require("cors");
+const mailer = require("nodemailer");
 
 const server = express();
 const port = 5000;
@@ -37,12 +38,37 @@ server.post("/users", async (req, res) => {
 
 server.get("/users", async (req, res) => {
   const { email, password } = req.query;
-
+  console.log(req.query);
   try {
-    const user = req.users.find((user) => user.email === email);
-    if (user && user.password === password) return res.status(200).send(user);
+    const { users } = req.users;
+    const user = users.find((user) => user.email === email);
+    if (user && user.password === password)
+      return res.status(200).send("Success");
   } catch (err) {
     return res.status(400).send("Can't get the user");
+  }
+});
+
+server.post("/message", async (req, res) => {
+  const { email, name, telephone, text } = req.body;
+  try {
+    let transporter = mailer.createTransport({
+      sendmail: true,
+      newline: "windows",
+      logger: false,
+    });
+
+    let message = {
+      from: email,
+      to: "razmikachikyan5@gmail.com",
+      subject: `From ${name} :: ${telephone}`,
+      text,
+    };
+
+    let info = await transporter.sendMail(message);
+    res.status(200).send(`Message sent successfully as ${info.messageId}`);
+  } catch (err) {
+    res.status(400).send("Something wents wrong", err.message);
   }
 });
 

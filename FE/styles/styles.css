@@ -308,7 +308,7 @@
 
 .contacts_form {
     position: relative;
-    z-index: 100;
+    z-index: 10000;
     display: flex;
     gap: 66px;
 }

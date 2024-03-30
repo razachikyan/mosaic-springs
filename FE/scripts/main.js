@@ -6,3 +6,4 @@ const LANDSPACE_BTN = document.getElementById("landspace");
     localStorage.setItem("page", btn.id);
   });
 });
+
