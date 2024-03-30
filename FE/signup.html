@@ -13,13 +13,15 @@
     <main class="main">
         <div class="container">
             <form class="form">
-                <input placeholder="Enter your e-mail" class="form_input">
-                <input placeholder="Name" class="form_input">
-                <input placeholder="Password" class="form_input">
-                <button class="main_btn">Sign Up</button>
-                <button class="second_btn">Log In</button>
+                <input id="email" placeholder="Enter your e-mail" class="form_input">
+                <input id="name" placeholder="Name" class="form_input">
+                <input id="password" placeholder="Password" type="password" class="form_input">
+                <button id="submit" type="submit" class="main_btn">Sign Up</button>
+                <button id="swap" class="second_btn">Log In</button>
+                <button id="forgot" class="second_btn hidden">Forgot your password?</button>
             </form>
         </div>
     </main>
+    <script src="./scripts/signup.js" defer></script>
 </body>
 </html>
