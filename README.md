@@ -1,4 +1,6 @@
-# mosaic-springs
+<h1 align="center">Monaic Springs</h1>
+
+<p>Full stack app with static HTML/CSS FE and simple ExpressJs API</p>
 
 ## Set up
 
@@ -23,4 +25,4 @@
     npm run dev
 ```
 
-- Open the index.html file (with live mode for dev)
+- Open the index.html file (with live server for dev)
