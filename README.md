@@ -1,4 +1,6 @@
-# mosaic-springs
+<h1 alight="center">Monaic Springs</h1>
+
+<p>Full stack app with static HTML/CSS FE and simple ExpressJs API</p>
 
 ## Set up
 
