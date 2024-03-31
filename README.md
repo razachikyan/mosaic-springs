@@ -1,4 +1,4 @@
-<h1 text-alight="center">Monaic Springs</h1>
+<h1 align="center">Monaic Springs</h1>
 
 <p>Full stack app with static HTML/CSS FE and simple ExpressJs API</p>
 
