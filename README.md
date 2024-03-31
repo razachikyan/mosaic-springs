@@ -1,4 +1,4 @@
-<h1 alight="center">Monaic Springs</h1>
+<h1 text-alight="center">Monaic Springs</h1>
 
 <p>Full stack app with static HTML/CSS FE and simple ExpressJs API</p>
 
@@ -25,4 +25,4 @@
     npm run dev
 ```
 
-- Open the index.html file (with live mode for dev)
+- Open the index.html file (with live server for dev)
