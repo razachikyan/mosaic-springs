@@ -1,7 +1,8 @@
 const express = require("express");
 const fs = require("fs/promises");
 const cors = require("cors");
-const mailer = require("nodemailer");
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const server = express();
 const port = 5000;
@@ -50,25 +51,33 @@ server.get("/users", async (req, res) => {
 });
 
 server.post("/message", async (req, res) => {
-  const { email, name, telephone, text } = req.body;
+  const { email, name, phone, text } = req.body;
   try {
-    let transporter = mailer.createTransport({
-      sendmail: true,
-      newline: "windows",
-      logger: false,
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL.trim(),
+        pass: process.env.PASSWORD.trim(),
+      },
     });
 
-    let message = {
-      from: email,
-      to: "razmikachikyan5@gmail.com",
-      subject: `From ${name} :: ${telephone}`,
-      text,
-    };
+    console.log({
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    });
 
-    let info = await transporter.sendMail(message);
-    res.status(200).send(`Message sent successfully as ${info.messageId}`);
+    let info = await transporter.sendMail({
+      to: "razmikachikyan5@gmail.com",
+      subject: `Testing the app\n Sent from ${email} :: ${phone} :: ${name}`,
+      text,
+    });
+
+    return res
+      .status(200)
+      .send(`Message sent successfully as ${info.messageId}`);
   } catch (err) {
-    res.status(400).send("Something wents wrong", err.message);
+    console.log(err.message);
+    return res.status(400).send(`Something wents wrong:: ${err.message}`);
   }
 });
 

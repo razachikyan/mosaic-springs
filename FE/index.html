@@ -74,15 +74,15 @@
                     contacts
                 </h3>
             </div>
-            <form class="contacts_form">
+            <form id="msb-form" class="contacts_form">
                 <div class="form_block">
-                    <input placeholder="Name" class="contacts_input"/>
-                    <input placeholder="Email" class="contacts_input"/>
-                    <input placeholder="Telephone" class="contacts_input"/>
+                    <input id="name" placeholder="Name" class="contacts_input"/>
+                    <input inputmode="email" placeholder="Email" class="contacts_input"/>
+                    <input id="phone" placeholder="Telephone" class="contacts_input"/>
                 </div>
                 <div class="form_block">
-                    <textarea class="contacts_message" placeholder="Message"></textarea>
-                    <button class="form_button">Send</button>
+                    <textarea id="text" class="contacts_message" placeholder="Message"></textarea>
+                    <button type="submit" class="form_button">Send</button>
                 </div>
             </form>
         </section>
